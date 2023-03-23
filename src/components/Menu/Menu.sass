@@ -1,0 +1,62 @@
+@import ./../../variables.sass
+
+.leftSidebar
+	padding: 10px
+	position: relative
+
+.nav
+
+	&__item
+		cursor: pointer
+		transition: 0.3s ease-in-out
+
+		&:hover
+			opacity: 0.5
+			transition: 0.3s ease-in-out
+		&.active
+			font-weight: 500
+			position: relative
+
+			&::before
+				content: ''
+				position: absolute
+				display: block
+				top: 0
+				left: 25px
+				width: 4px
+				height: 100%
+				background-color: $purple
+				box-shadow: 3px -2px 5px 1px rgba(102, 102, 204, 0.2)
+
+			svg
+				stroke: $purple
+		
+		&:not(.active)
+			svg
+				stroke: $gray
+
+		&.nav-link,&.nav-link.active
+			padding-left: 50px !important
+			min-height: 50px
+			min-width: 100%	
+			text-align: start
+
+		a
+			white-space: nowrap
+			word-break: unset
+
+.btn-menu-toggle.btn
+	position: absolute
+	width: 40px
+	height: 40px
+	background-color: $purple
+	z-index: 2
+	right: 10px
+	top: 15px
+
+@media screen and (min-width: $ds)
+	.btn-menu-toggle.btn
+		display: none
+
+.card.menu-card
+	border: none
