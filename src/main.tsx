@@ -4,12 +4,12 @@ import App from './App'
 import './variables.sass'
 import './index.sass'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter  } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<Router>
+		<BrowserRouter>
 			<App />
-		</Router>
+		</BrowserRouter>
 	</React.StrictMode>
 )

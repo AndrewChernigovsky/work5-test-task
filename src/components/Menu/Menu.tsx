@@ -23,7 +23,7 @@ const Menu = () => {
 	const [open, setOpen] = useState(true);
 
 	return (
-		<div className="leftSidebar">
+		<div className="leftSidebar col-sm">
 
 			<Button className='btn-menu-toggle' onClick={() => setOpen(!open)} aria-controls="example-fade-text"
 				aria-expanded={open}/>
